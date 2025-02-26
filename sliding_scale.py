@@ -12,7 +12,7 @@ st.write("Use the slider below to adjust your weekly meat spending and see how i
 # User input: Weekly meat spending using a slider
 weekly_spending = st.slider("Select your weekly spending on meat ($):", min_value=30, max_value=250, step=1, value=100)
 
-# Define inflation rate (5% per year)
+# Define inflation rate (8% per year)
 inflation_rate = 0.08
 weeks_per_year = 52
 
