@@ -24,8 +24,8 @@ year_3_spending = year_2_spending * (1 + inflation_rate)
 # Display results
 st.subheader("Projected Yearly Spending:")
 st.metric(label="Year 1 (No Inflation)", value=f"${year_1_spending:,.2f}")
-st.metric(label="Year 2 (5% Inflation)", value=f"${year_2_spending:,.2f}")
-st.metric(label="Year 3 (5% Inflation)", value=f"${year_3_spending:,.2f}")
+st.metric(label="Year 2 (8% Inflation)", value=f"${year_2_spending:,.2f}")
+st.metric(label="Year 3 (8% Inflation)", value=f"${year_3_spending:,.2f}")
 
 # Create a DataFrame for visualization
 data = pd.DataFrame({
