@@ -10,10 +10,10 @@ st.title("Interactive Sliding Scale: Yearly Meat Spending with Inflation")
 st.write("Use the slider below to adjust your weekly meat spending and see how inflation impacts yearly costs.")
 
 # User input: Weekly meat spending using a slider
-weekly_spending = st.slider("Select your weekly spending on meat ($):", min_value=30, max_value=200, step=10, value=100)
+weekly_spending = st.slider("Select your weekly spending on meat ($):", min_value=30, max_value=250, step=1, value=100)
 
 # Define inflation rate (5% per year)
-inflation_rate = 0.05
+inflation_rate = 0.08
 weeks_per_year = 52
 
 # Compute yearly spending for each year
