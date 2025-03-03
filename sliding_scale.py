@@ -23,9 +23,10 @@ year_3_spending = year_2_spending * (1 + inflation_rate)
 
 # Display results
 st.subheader("Projected Yearly Spending:")
-st.metric(label="Year 1 (No Inflation)", value=f"${year_1_spending:,.2f}")
-st.metric(label="Year 2 (8% Inflation)", value=f"${year_2_spending:,.2f}")
-st.metric(label="Year 3 (8% Inflation)", value=f"${year_3_spending:,.2f}")
+col1, col2, col3 = st.columns(3)
+col1.metric(label="Year 1 (No Inflation)", value=f"${year_1_spending:,.2f}")
+col2.metric(label="Year 2 (8% Inflation)", value=f"${year_2_spending:,.2f}")
+col3.metric(label="Year 3 (8% Inflation)", value=f"${year_3_spending:,.2f}")
 
 # Create a DataFrame for visualization
 data = pd.DataFrame({
@@ -34,6 +35,7 @@ data = pd.DataFrame({
 })
 
 # Plot the spending trend
+st.subheader("Yearly Spending Trend")
 fig, ax = plt.subplots(figsize=(8, 5))
 ax.plot(data["Year"], data["Total Spending ($)"], marker="o", linestyle="-", color="blue", label="Yearly Spending")
 ax.set_xlabel("Year")
